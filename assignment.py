@@ -92,8 +92,6 @@ while running:
                 print("enter a choice from menu")
 
 
-
-
         elif choice =="M":
             try:
                 read_file()
