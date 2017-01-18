@@ -84,9 +84,10 @@ while running:
                 except ValueError:
                     print("Invalid input; enter a valid number")
 
-                csvfile = open(FILENAME, 'a')                                      #insert?
-                csvfile.write(bookname+","+author+","+str(pages)+","+"r")
-                csvfile.close()
+                list=[bookname,author,pages]                                     #insert?
+                openfile = open("test.csv", 'a', newline='')
+                csv_writer = csv.writer(openfile, dialect='excel')
+                csv_writer.writerow(list)
 
             except ValueError:
                 print("enter a choice from menu")
